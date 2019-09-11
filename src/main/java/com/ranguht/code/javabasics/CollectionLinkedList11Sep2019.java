@@ -1,7 +1,7 @@
 package com.ranguht.code.javabasics;
 import java.util.Iterator;
 import java.util.LinkedList;
-public class CollectionLinkedList {
+public class CollectionLinkedList11Sep2019 {
     public static void main(String[] args) {
         LinkedList<String> ll=new LinkedList<String>();
 
@@ -20,7 +20,6 @@ public class CollectionLinkedList {
         Iterator<String>itr1=des1.descendingIterator();
         while (itr1.hasNext())
             System.out.println(itr1.next());
-
 
 
     }
