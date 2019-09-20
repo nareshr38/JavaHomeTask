@@ -1,4 +1,4 @@
-package com.ranguht.code.javabasics;
+package com.ranguht.code.javabasics.Sessions;
 import java.util.ArrayList;
 import java.util.Collections;
 
