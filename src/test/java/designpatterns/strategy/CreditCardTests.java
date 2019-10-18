@@ -3,6 +3,7 @@ package designpatterns.strategy;
 import com.ranguht.code.javabasics.designpatterns.strategy.CardValidator;
 import com.ranguht.code.javabasics.designpatterns.strategy.CreditCard;
 import com.ranguht.code.javabasics.designpatterns.strategy.MCValidator;
+import com.ranguht.code.javabasics.designpatterns.strategy.NareshValidator;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,7 +12,9 @@ public class CreditCardTests {
     @DataProvider(name = "testdataForCardsTests")
     public Object[][] testdataForCardsTests() {
         return new Object[][]{
-                {new CreditCard("MC-123456"), new MCValidator(), true}
+                {new CreditCard("MC-123456"), new MCValidator(), true},
+                {new CreditCard("NR-123456"), new NareshValidator(), true}
+
 //                {new CreditCard("VI-123456"),new MCValidator(), true}
 //                {new Creditcard("123456_AM"), new AmexValidator(), true},
 //                {new Creditcard("123456"),new AmexValidator() ,false},
