@@ -1,9 +1,13 @@
 package com.ranguht.code.javabasics.hometask_collections_1;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class SortingStudentComparable {
+    private static final Logger logger = LogManager.getLogger(SortingStudentComparable.class.getName());
     public static void main(String[] args) {
 
         ArrayList<Studentcomparable> list=new ArrayList();
@@ -14,7 +18,7 @@ public class SortingStudentComparable {
         Collections.sort(list);
         for (Studentcomparable b:list)
         {
-            System.out.println(b.age +b.name +b.rollno);
+            logger.info(b.age +b.name +b.rollno);
         }
 
 

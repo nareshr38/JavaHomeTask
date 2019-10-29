@@ -1,10 +1,10 @@
 package oopstests;
 
-com.ranguht.code.javabasics.
-import com.ftajava.ftaclass.oopstask1.ApplicationUtility;
-import com.ftajava.ftaclass.oopstask1.Bouquet;
-import com.ftajava.ftaclass.oopstask1.Lilly;
-import com.ftajava.ftaclass.oopstask1.Rose;
+
+import com.ranguht.code.javabasics.oopstask1.ApplicationUtility;
+import com.ranguht.code.javabasics.oopstask1.Bouquet;
+import com.ranguht.code.javabasics.oopstask1.Lilly;
+import com.ranguht.code.javabasics.oopstask1.Rose;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
