@@ -2,8 +2,7 @@ package com.ranguht.code.javabasics.hometask_6_3;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HeavenlyBody {
-
+public final class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
@@ -13,12 +12,14 @@ public class HeavenlyBody {
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<HeavenlyBody>();
     }
+
     @Override
     public boolean equals(Object o) {
-        HeavenlyBody h= (HeavenlyBody) o;
+        HeavenlyBody h = (HeavenlyBody) o;
         return this.name.equals(h.name) &&
-                this.hashCode()== h.hashCode();
+                this.hashCode() == h.hashCode();
     }
+
     @Override
     public int hashCode() {
         System.out.println("hashcode called");
@@ -45,4 +46,5 @@ public class HeavenlyBody {
 
 
 }
+
 

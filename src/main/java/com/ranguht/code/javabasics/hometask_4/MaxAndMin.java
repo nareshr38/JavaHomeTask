@@ -1,22 +1,49 @@
 package com.ranguht.code.javabasics.hometask_4;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.Scanner;
+
 public class MaxAndMin {
+    private static final Logger logger = LogManager.getLogger(MaxAndMin.class.getName());
+
     public static void main(String[] args) {
-        int arr[] = {4, 5, 1, 23, 56};
-        int minimum = arr[0];
-        int maximum = arr[0];
 
-        for (int index = 0; index < arr.length; index++) {
+        Scanner input = new Scanner(System.in);
+        int[] array = new int[5];
 
-            if (arr[index] < arr[0])
-                minimum = arr[index];
-            else if (arr[index] > arr[0])
-                maximum = arr[index];
+        for (int i = 0; i < array.length; i++) {
+            logger.info("Please enter array numbers");
+            array[i] = input.nextInt();
         }
 
-        System.out.println("Smallest Number in an array is : " + minimum);
-        System.out.println("Biggest Number in an array is : " + maximum);
+        int max = getMax(array);
+        logger.info("Maximum Value is: " + max);
+
+        int min = getMin(array);
+        logger.info("Minimum Value is: " + min);
+    }
 
 
+    public static int getMax(int[] inputArray) {
+        int maxValue = inputArray[0];
+        for (int i = 1; i < inputArray.length; i++) {
+            if (inputArray[i] > maxValue) {
+                maxValue = inputArray[i];
+            }
+        }
+        return maxValue;
+    }
+
+
+    public static int getMin(int[] inputArray) {
+        int minValue = inputArray[0];
+        for (int i = 1; i < inputArray.length; i++) {
+            if (inputArray[i] < minValue) {
+                minValue = inputArray[i];
+            }
+        }
+        return minValue;
     }
 }

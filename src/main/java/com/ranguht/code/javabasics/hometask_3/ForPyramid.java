@@ -1,30 +1,40 @@
 package com.ranguht.code.javabasics.hometask_3;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 public class ForPyramid {
+
+    private static final Logger logger = LogManager.getLogger(ForPyramid.class.getName());
     static int counter = 0;
-    static int difference = 0;
+    static int differenceToBeDisplayedOnPyramid = 0;
+
 
     public static void main(String[] args) {
-        System.out.println("Enter the integer number : ");
+
+
+        logger.info("Enter the integer number for pyramid height : ");
         Scanner s = new Scanner(System.in);
-        int number = s.nextInt();
+        int numberForPyramidHt = s.nextInt();
 
-        System.out.println("Enter the integer for difference : ");
-        int difference = s.nextInt();
+        logger.info("Enter the integer for difference to be displayed on pyramid: ");
+        int differenceToBeDisplayedOnPyramid = s.nextInt();
 
-        pyramidFor(number, difference);
+        pyramidFor(numberForPyramidHt, differenceToBeDisplayedOnPyramid);
     }
 
-    public static void pyramidFor(int number, int difference) {
-        for (int row = 1; row < number; row++) {
+    public static void pyramidFor(int pyramidHeight, int differenceToBeDisplayedOnPyramid) {
+        StringBuilder pattern = new StringBuilder("\n");
+        for (int rowNumber = 0; rowNumber < pyramidHeight; rowNumber++) {
 
-            for (int column = 1; column < row + 1; column++) {
-                System.out.print(counter + " ");
-                counter = counter + difference;
+            for (int columnNumber = 0; columnNumber < rowNumber + 1; columnNumber++) {
+                pattern = pattern.append(counter + " ");
+                counter = counter + differenceToBeDisplayedOnPyramid;
             }
-            System.out.println("");
+            pattern = pattern.append("\n");
         }
+        logger.info(pattern);
     }
 }

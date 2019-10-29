@@ -6,8 +6,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-public class Collection_TreeSet {
-    private static final Logger logger = LogManager.getLogger(Collection_TreeSet.class.getName());
+public class CollectionTreeSet {
+    private static final Logger logger = LogManager.getLogger(CollectionTreeSet.class.getName());
 
     public static void main(String[] args) {
         TreeSet<String> set = new TreeSet<String>();

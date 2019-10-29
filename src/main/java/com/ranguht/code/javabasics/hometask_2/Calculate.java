@@ -1,6 +1,10 @@
 package com.ranguht.code.javabasics.hometask_2;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Calculate {
+    private static final Logger LOGGER = LogManager.getLogger(Calculate.class.getName());
     public static void main(String[] args) {
 
         double firstNumber = Double.parseDouble(args[0]);
@@ -8,17 +12,17 @@ public class Calculate {
         String operation = args[2];
 
         if (operation.equals("+")) {
-            System.out.println("Addition : " + (firstNumber + secondNumber));
+            LOGGER.info("Addition : " + (firstNumber + secondNumber));
         } else if (operation.equals("-")) {
-            System.out.println("Subtraction :" + (firstNumber - secondNumber));
+            LOGGER.info("Subtraction :" + (firstNumber - secondNumber));
         } else if (operation.equals("*")) {
-            System.out.println("Multiplication :" + firstNumber * secondNumber);
+            LOGGER.info("Multiplication :" + firstNumber * secondNumber);
         } else if (operation.equals("/")) {
-            System.out.println("Division :" + (firstNumber / secondNumber));
+            LOGGER.info("Division :" + (firstNumber / secondNumber));
         } else if (operation.equals("%")) {
-            System.out.println("Remainder :" + (firstNumber % secondNumber));
+            LOGGER.info("Remainder :" + (firstNumber % secondNumber));
         } else {
-            System.out.println("percentage:" + (firstNumber / secondNumber) * 100);
+            LOGGER.info("percentage:" + (firstNumber / secondNumber) * 100);
         }
     }
 }

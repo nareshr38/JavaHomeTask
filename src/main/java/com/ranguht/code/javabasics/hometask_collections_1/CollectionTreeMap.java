@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class Collection_TreeMap {
-    private static final Logger logger = LogManager.getLogger(Collection_TreeMap.class.getName());
+public class CollectionTreeMap {
+    private static final Logger logger = LogManager.getLogger(CollectionTreeMap.class.getName());
 
     public static void main(String[] args) {
         TreeMap<Integer, String> tmap = new TreeMap<Integer, String>();

@@ -1,36 +1,42 @@
 package com.ranguht.code.javabasics.hometask_3;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 public class WhilePyramid {
+    private static final Logger logger = LogManager.getLogger(WhilePyramid.class.getName());
     static int counter = 0;
-    static int x;
 
     public static void main(String[] args) {
 
-        System.out.println("Enter the integer number : ");
+
+        logger.info("Enter the integer number for pyramid height : ");
         Scanner s = new Scanner(System.in);
-        int number = s.nextInt();
+        int numberForPyramidHt = s.nextInt();
 
-        System.out.println("Enter the integer for difference : ");
-        int difference = s.nextInt();
+        logger.info("Enter the integer for difference to be displayed on pyramid: ");
+        int differenceToBeDisplayedOnPyramid = s.nextInt();
 
-        pyramidWhile(number, difference);
+        pyramidWhile(numberForPyramidHt, differenceToBeDisplayedOnPyramid);
 
     }
 
-    public static void pyramidWhile(int number, int difference) {
-        int row = 1;
-        while (row < number) {
-            int column = 1;
+    public static void pyramidWhile(int numberForPyramidHt, int differenceToBeDisplayedOnPyramid) {
+        StringBuilder pattern = new StringBuilder("\n");
+        int rowNumber = 0;
+        while (rowNumber < numberForPyramidHt) {
+            int columnNumber = 0;
 
-            while (column < row + 1) {
-                System.out.print(counter + " ");
-                counter = counter + difference;
-                column++;
+            while (columnNumber < rowNumber + 1) {
+                pattern = pattern.append(counter + " ");
+                counter = counter + differenceToBeDisplayedOnPyramid;
+                columnNumber++;
             }
-            row++;
-            System.out.println("");
+            rowNumber++;
+            pattern = pattern.append("\n");
         }
-
+        logger.info(pattern);
     }
 }

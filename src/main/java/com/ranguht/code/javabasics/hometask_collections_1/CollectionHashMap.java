@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Collection_HashMap {
-    private static final Logger logger = LogManager.getLogger(Collection_HashMap.class.getName());
+public class CollectionHashMap {
+    private static final Logger logger = LogManager.getLogger(CollectionHashMap.class.getName());
 
     public static void main(String[] args) {
         HashMap<Integer, String> map = new HashMap<Integer, String>();

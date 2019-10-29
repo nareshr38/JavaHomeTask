@@ -2,15 +2,7 @@ package com.ranguht.code.javabasics.hometask_6;
 
 public class CanBalance {
 
-
-    /*public static void main(String[] args) {
-        int[] CanBalanceData = {1, 1, 1, 2, 1};
-        boolean canBalanceResult = calculateAfterSplit(CanBalanceData);
-        System.out.println(canBalanceResult);
-
-    }*/
-
-    public static boolean calculateAfterSplit(int[] nums) {
+    public boolean calculateAfterSplit(int[] nums) {
         int first = 0;
         int second = 0;
 

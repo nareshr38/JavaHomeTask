@@ -1,31 +1,26 @@
 package com.ranguht.code.javabasics.hometask_6;
 
 public class CountClumps {
-    /*public static void main(String[] args) {
-        int[] countClumpsData = {1, 2, 2, 3, 4, 4};
-        int countClumpsResult = seriesInArray(countClumpsData);
-        System.out.println(countClumpsResult);
-    }*/
 
-    public static int seriesInArray(int[] nums) {
+    public int seriesInArray(int[] nums) {
 
-        int count = 0;
-        int i = 0;
+        int counter = 0;
+        int index = 0;
 
-        while (i < nums.length) {
-            int val = nums[i];
-            i++;
+        while (index < nums.length) {
+            int val = nums[index];
+            index++;
             int length = 1;
-            while (i < nums.length && nums[i] == val) {
-                i++;
+            while (index < nums.length && nums[index] == val) {
+                index++;
                 length++;
             }
 
             if (length > 1)
-                count++;
+                counter++;
         }
 
-        return count;
+        return counter;
     }
 
 

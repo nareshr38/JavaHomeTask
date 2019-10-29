@@ -5,8 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-public class Collection_ArrayList {
-    private static final Logger logger = LogManager.getLogger(Collection_ArrayList.class.getName());
+public class CollectionArrayList {
+    private static final Logger logger = LogManager.getLogger(CollectionArrayList.class.getName());
 
     public static void main(String[] args) {
 

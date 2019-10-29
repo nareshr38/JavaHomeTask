@@ -7,8 +7,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
-public class Collection_LinkedHashMap {
-    private static final Logger logger = LogManager.getLogger(Collection_LinkedHashMap.class.getName());
+public class CollectionLinkedHashMap {
+    private static final Logger logger = LogManager.getLogger(CollectionLinkedHashMap.class.getName());
 
     public static void main(String[] args) {
         LinkedHashMap<Integer, String> lmap = new LinkedHashMap<Integer, String>();

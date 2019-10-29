@@ -1,40 +1,49 @@
 package com.ranguht.code.javabasics.hometask_3;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 public class DoWhilePyramid {
+
+    private static final Logger logger = LogManager.getLogger(DoWhilePyramid.class.getName());
     static int counter = 0;
 
     public static void main(String[] args) {
 
-        System.out.println("Enter the integer number : ");
+        logger.info("Enter the integer number for pyramid height: ");
         Scanner s = new Scanner(System.in);
-        int number = s.nextInt();
+        int numberForPyramidHt = s.nextInt();
 
-        System.out.println("Enter the integer for difference : ");
-        int difference = s.nextInt();
+        logger.info("Enter the integer for difference to be displayed on pyramid : ");
+        int differenceToBeDisplayedOnPyramid = s.nextInt();
 
-        pyramidDoWhile(number, difference);
+        pyramidDoWhile(numberForPyramidHt, differenceToBeDisplayedOnPyramid);
 
     }
 
-    public static void pyramidDoWhile(int number, int difference) {
+    public static void pyramidDoWhile(int numberForPyramidHt, int differenceToBeDisplayedOnPyramid) {
 
 
-        int row = 1;
-        int column = 1;
+        int rowNumber = 0;
+        int counter = 0;
+
+        StringBuilder pattern = new StringBuilder("\n");
         do {
+            int columnNumber = 0;
             do {
-                System.out.print(counter + " ");
-                counter = counter + difference;
-                column++;
-            } while (column < row + 1);
+                pattern = pattern.append(counter + " ");
+                counter = counter + differenceToBeDisplayedOnPyramid;
+                columnNumber++;
+            } while (columnNumber < rowNumber + 1);
+            pattern = pattern.append("\n");
 
-            System.out.print("\n");
-            row++;
-            column = 1;
-        } while (row < number);
+            rowNumber++;
 
+        } while (rowNumber < numberForPyramidHt);
+
+        logger.info(pattern);
     }
 
 }

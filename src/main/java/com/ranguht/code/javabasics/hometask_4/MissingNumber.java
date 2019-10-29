@@ -1,43 +1,40 @@
 package com.ranguht.code.javabasics.hometask_4;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.Scanner;
+
 public class MissingNumber {
 
+    private static final Logger logger = LogManager.getLogger(MissingNumber.class.getName());
+
     public static void main(String[] args) {
-        int limit=100;
-        int input_array[] = {5, 8, 22, 3, 10,1};
-        boolean is_present = true;
-        for(int i=0;i<=limit;i++)
-        {
-            for (int number:input_array)
-            {
-                if (number==i)
-                {
-                    is_present=false;
+        StringBuilder pattern = new StringBuilder("\n");
+        int limit = 100;
+        logger.info("Please enter array numbers");
+        Scanner input = new Scanner(System.in);
+        int[] inputArray = new int[5];
+
+        for (int index = 0; index < inputArray.length; index++) {
+
+            inputArray[index] = input.nextInt();
+        }
+
+        boolean isPresent = true;
+        for (int jIndex = 0; jIndex <= limit; jIndex++) {
+            for (int number : inputArray) {
+                if (number == jIndex) {
+                    isPresent = false;
                 }
             }
-            if (is_present)
-            {
-                System.out.print(i+" ");
+            if (isPresent) {
+                pattern = pattern.append(jIndex + " ");
 
             }
-            is_present=true;
+
+            isPresent = true;
         }
+        logger.info(pattern);
     }
-
-    /*public static void main(String[] args) {
-        int a[] = {1, 2, 3, 5, 6};
-        int miss = getMissingNo(a, 5);
-        System.out.println(miss);
-    }
-
-    public static int getMissingNo(int a[], int n) {
-
-        int i, total;
-        total = (n + 1) * (n + 2) / 2;
-        for (i = 0; i < n; i++)
-            total = total - a[i];
-        return total;
-
-
-    }*/
 }
