@@ -1,7 +1,7 @@
 package com.ranguht.code.javabasics.cleancodeautomation.pages;
 
-import com.ftajava.ftaclass.cleancodeautomation.model.HomePage;
-import com.ftajava.ftaclass.cleancodeautomation.model.User;
+import com.ranguht.code.javabasics.cleancodeautomation.model.HomePage;
+import com.ranguht.code.javabasics.cleancodeautomation.model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
