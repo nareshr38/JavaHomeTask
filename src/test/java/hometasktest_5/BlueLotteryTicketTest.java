@@ -1,6 +1,6 @@
 package hometasktest_5;
 
-import com.ranguht.code.javabasics.hometask_5.BlueLotteryTicket;
+import com.ranguht.code.javabasics.hometask5.BlueLotteryTicket;
         import org.apache.logging.log4j.LogManager;
         import org.apache.logging.log4j.Logger;
         import org.testng.Assert;

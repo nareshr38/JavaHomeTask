@@ -1,6 +1,6 @@
 package hometasktest_6;
 
-import com.ranguht.code.javabasics.hometask_6.CountClumps;
+import com.ranguht.code.javabasics.hometask6.CountClumps;
         import org.apache.logging.log4j.LogManager;
         import org.apache.logging.log4j.Logger;
         import org.testng.Assert;

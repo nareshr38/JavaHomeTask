@@ -1,5 +1,5 @@
 package hometasktest_6;
-import com.ranguht.code.javabasics.hometask_6.MaxSpan;
+import com.ranguht.code.javabasics.hometask6.MaxSpan;
         import org.apache.logging.log4j.LogManager;
         import org.apache.logging.log4j.Logger;
         import org.testng.Assert;
